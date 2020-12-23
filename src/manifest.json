@@ -1,0 +1,21 @@
+{
+	"name": "Echo Log MVP",
+	"description": "An enhancement for console.log() that allows for easy styling.",
+	"version": "1.0",
+	"manifest_version": 2,
+	"browser_action": {
+		"default_icon": "icon-128.png"
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"https://developer.chrome.com/*",
+				"https://*.local.invisionapp.com/*"
+			],
+			"js": [
+				"bootstrap.js"
+			],
+			"run_at": "document_start"
+		}
+	]
+}
